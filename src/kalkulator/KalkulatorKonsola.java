@@ -19,8 +19,8 @@ public class KalkulatorKonsola {
 		
 		System.out.println("Podawaj działania postaci 12 + 13, a żeby zakończyć napis koniec");
 		while(true) {
-			if(! sc.hasNextInt()) {
-				break; // FIXME - powinienem spr czy to jest "koniec"
+			if(!sc.hasNextInt() && sc.next().equalsIgnoreCase("koniec")) {
+				break;
 			}
 			int x = sc.nextInt();
 			String op = sc.next();
