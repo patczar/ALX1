@@ -38,6 +38,12 @@ public class Osoba {
 		this.dataUrodzenia = dataUrodzenia;
 	}
 
+	public Osoba(String imie, String nazwisko, String dataUrodzenia) {
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.dataUrodzenia = LocalDate.parse(dataUrodzenia);
+	}
+
 	@Override
 	public String toString() {
 		return "Osoba [imie=" + imie + ", nazwisko=" + nazwisko + ", dataUrodzenia=" + dataUrodzenia + "]";
