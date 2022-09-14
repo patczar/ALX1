@@ -9,12 +9,7 @@ public class KalkulatorKonsola {
 		case "+": return x + y;
 		case "-": return x - y;
 		case "*": return x * y;
-		case "/": {
-			if(y == 0)
-				return 0;
-			else
-				return x / y;
-		}
+		case "/": return y == 0 ? 0 : x / y;
 		default : return 0;
 		}
 	}
