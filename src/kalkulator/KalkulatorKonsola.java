@@ -18,9 +18,12 @@ public class KalkulatorKonsola {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Podawaj działania postaci 12 + 13, a żeby zakończyć napis koniec");
+		mainloop:
 		while(true) {
-			if(!sc.hasNextInt() && sc.next().equalsIgnoreCase("koniec")) {
-				break;
+			while(!sc.hasNextInt()) {
+				if(sc.next().equalsIgnoreCase("koniec")) {
+					break mainloop;
+				}
 			}
 			int x = sc.nextInt();
 			String op = sc.next();
@@ -29,7 +32,7 @@ public class KalkulatorKonsola {
 			int wynik = oblicz(x, y, op);
 			System.out.println("Wynik: " + wynik);
 		}
-
+		System.out.println("bajo jajo");
 	}
 
 }
