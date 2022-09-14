@@ -3,6 +3,16 @@ package kalkulator;
 import java.util.Scanner;
 
 public class KalkulatorKonsola {
+	
+	static int oblicz(int x, int y, String operacja) {
+		switch(operacja) {
+		case "+": return x + y;
+		case "-": return x - y;
+		case "*": return x * y;
+		case "/": return x / y;
+		default : return 0;
+		}
+	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -12,7 +22,7 @@ public class KalkulatorKonsola {
 		String op = sc.next();
 		int y = sc.nextInt();
 		
-		int wynik = x + y;
+		int wynik = oblicz(x, y, op);
 		System.out.println("Wynik: " + wynik);
 
 	}
